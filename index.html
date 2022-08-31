@@ -20,15 +20,22 @@
             <img src="resources/images/ic-logo.svg" alt="">
             <h4>COLMAR<span>ACADEMY</span></h4>
         </div>
-        <nav>
+        <nav class="web">
             <ul>
-                <li><a href="#">On Campus</a></li>
-                <li><a href="#">Online</a></li>
-                <li><a href="#">For Companies</a></li>
+                <li><a href="#information">On Campus</a></li>
+                <li><a href="#courses">Online</a></li>
+                <li><a href="#thesis">For Companies</a></li>
                 <li><a href="#">Sign In</a></li>                
             </ul>
         </nav>
+        <nav class="mobile">
+            <img src="resources/images/ic-logo.svg" alt="">
+            <a href="#information"><img src="resources/images/ic-on-campus.svg" alt=""></a>
+            <a href="#courses"><img src="resources/images/ic-online.svg" alt=""></a>
+            <a href="#"><img src="resources/images/ic-login.svg" alt=""></a>
+        </nav>
     </header>
+    
 
     <!-- Banner Section-->
 
@@ -62,19 +69,27 @@
         </div>
 
         <div class="info-container">
+
             <div class="info-box">
-                <div class="info-img">
+                <div class="info-img web">
                     <img src="resources/images/information-orientation.jpg" alt="People walking. View from above">                    
+                </div>
+                <div class="info-img mobile">
+                    <img src="resources/images/information-orientation-mobile.jpg" alt="People walking. View from above">                    
                 </div>
                 <div class="info-text">
                     <h3 class="flex-item">Orientation date</h3>
                     <p class="flex-item">Tue 10/11 & Wed 10/12: 8am-3pm</p>
                     <p class="flex-item"><a href="#">Read more</a></p>                    
                 </div>
-            </div>           
+            </div>     
+
             <div class="info-box">
-                <div class="info-img">
+                <div class="info-img web">
                     <img src="resources/images/information-campus.jpg" alt="A campus site with people studying and a big world map">
+                </div>
+                <div class="info-img mobile">
+                    <img src="resources/images/information-campus-mobile.jpg" alt="People walking. View from above">                    
                 </div>
                 <div class="info-text">
                     <h3 class="flex-item">Our campus</h3>
@@ -82,9 +97,13 @@
                     <p class="flex-item"><a href="#">Read more</a></p>                    
                 </div>
             </div>
+
             <div class="info-box">
-                <div class="info-img">
+                <div class="info-img web">
                     <img src="resources/images/information-guest-lecture.jpg" alt="An old man with white beard">
+                </div>
+                <div class="info-img mobile">
+                    <img src="resources/images/information-guest-lecture-mobile.jpg" alt="People walking. View from above">                    
                 </div>
                 <div class="info-text">
                     <h3 class="flex-item">Our guest lecture</h3>
@@ -101,7 +120,7 @@
  
     <section id="courses">
         <h2 class="section-title">Start Learning</h2>
-        <div class="courses-container">
+        <div class="courses-container web">
 
             <div class="course-box">
                 <div>
@@ -168,8 +187,35 @@
                     <p class="flex-item">Analytics, Content Marketing, Mobile Marketing</p>                    
                 </div>
             </div>
+        </div>
+
+        <div class="mobile">
+            <div class="course-mobile">
+                <h3 class="flex-item">Software Engineering</h3>
+            </div>
+
+            <div class="course-mobile">
+                <h3 class="flex-item">Computer Art</h3>
+            </div>
+
+            <div class="course-mobile">
+                <h3 class="flex-item">Design</h3>
+            </div class="course-mobile">
+
+            <div class="course-mobile">
+                <h3 class="flex-item">Data</h3>
+            </div>
+
+            <div class="course-mobile">
+                <h3 class="flex-item">Business</h3>
+            </div>
+
+            <div class="course-mobile">
+                <h3 class="flex-item">Marketing</h3>
+            </div>
 
         </div>
+
     </section>
 
     <!-- Thesis Exhibition Section -->
@@ -183,13 +229,13 @@
                     <source src="resources/videos/thesis.mp4" type="video/mp4">
                     Your browser doesn't support this video.
                 </video>
-                <h3 class="flex-item">Reimagine urban</h3>
-                <p class="flex-item">"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, net consequat neque. Sed non accumsan urna. Phasellus sed consequat ex.
+                <h3 class="flex-item web">Reimagine urban</h3>
+                <p class="flex-item web">"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, net consequat neque. Sed non accumsan urna. Phasellus sed consequat ex.
                     Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula." <br>   
                 </p>
             </div>
 
-            <div class="info-container">
+            <div class="info-container web">
 
                 <div class="info-box">
                     <div class="info-img">
@@ -213,6 +259,7 @@
             </div>            
         </div>
     </section>
+    
 
     <!-- Footer Section -->
 
@@ -220,7 +267,7 @@
         <div>
             <p>&copy 2016 Colmar Academy. All rights reserved</p>
         </div>
-        <div>
+        <div class="web">
             <ul>
                 <li><a href="#">Terms</a></li>
                 <li><a href="#">Privacy</a></li>

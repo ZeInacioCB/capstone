@@ -43,11 +43,17 @@ img {
     height: 100%;
 }
 
+.mobile {
+    display: none;
+}
+
 
 /* General Styling for sections and Info Box flexbox */
 
 section {
+    width: 100%;
     padding: 2rem 4rem 3rem;
+    scroll-margin-top: 64px; /* Add an offset to all hyperlinks, so that they don't be hidden by the top bar*/
 }
 
 .section-title {
@@ -85,6 +91,17 @@ div.info-text {
 
 .flex-item {
     padding: 0.5rem 1%;
+}
+
+@media only screen and (max-width: 1300px) {
+    /* Smaller screens adaptation */
+    div.info-img {
+        width: 35%;
+        padding: 0.5rem;
+    }
+    .flex-item {
+        padding: 0.25rem 0 0.25rem .5rem;
+    }
 }
 
 
@@ -139,13 +156,27 @@ header nav ul li:last-child {
     margin-right: 1rem;
 }
 
+/* Mobile Navigation Bar (breaks at 740px width) */
+
+@media only screen and (max-width: 740px) {
+    header nav.mobile {
+        display: flex;
+        width: 100%;
+        margin: 1% 2.5rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header div.logo, header nav.web {
+        display: none;
+    }
+}
 
 /* WebSite - Banner Style */
 
 #banner {
     display: inline-flex;
     margin-top: 64px;
-    width: 100%;
     background-color: rgb(255, 216, 204);
 }
 
@@ -154,18 +185,20 @@ header nav ul li:last-child {
     padding-right: 2rem;
 }
 
-#banner .banner-container {
+#banner div.banner-container {
     display: inline-flex;
     width: 40%;
-    padding-right: 10%;
+    padding-right: 6%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
+
 #banner .banner-container .banner-item {
-    margin: 5% 1%;
-    width: 90%;
+    margin: 2rem 1rem 2rem 0.5rem;
+    width: 100%;
 }
+
 .banner-container button.banner-item {
     background-color: rgb(11, 29, 55);
     color: rgb(228, 233, 243);
@@ -174,9 +207,57 @@ header nav ul li:last-child {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.25rem;
+    font-size: 1.325rem;
     cursor: pointer;
     border-radius: 1rem;
+}
+
+/* Mobile and Responsive Banner Section (breaks at 980px width) */
+@media only screen and (max-width: 1200px) {
+
+    #banner div.banner-container {
+        padding: 0;
+    }
+    #banner .banner-container .banner-item {
+        margin: 1.75rem 0;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+
+    #banner {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    #banner div {
+        width: 100%;
+    }
+
+    #banner div.img-container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    #banner div.banner-container {
+        width: 100%;
+        padding: 2rem 3rem 3rem;
+        margin: 0;
+        gap: 2rem;
+    }
+
+    #banner .banner-container .banner-item {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+
+    #banner div.banner-container {
+        padding: 2rem 1rem 2rem;
+    }
 }
 
 
@@ -184,7 +265,6 @@ header nav ul li:last-child {
 
 #information {
     display: inline-flex;
-    width: 100%;
     background-color: rgb(255, 238, 219);
 }
 
@@ -203,11 +283,58 @@ header nav ul li:last-child {
     text-decoration: underline;
 }
 
+/* Mobile and Responsive Information Section (breaks at 1050px width) */
+@media only screen and (max-width: 1050px) {
+
+    #information .info-banner {
+        display: none;
+    }
+
+    #information div.info-container {
+        width: 100%;
+    }
+
+    #information div.info-box {
+        border: none;
+    }
+    
+    #information .flex-item {
+        padding: 0.25rem 0 0.25rem .5rem;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+
+    #information {
+        padding: 1.5rem 1rem 1rem;
+    }
+
+    #information div.info-img {
+        width: 100%;
+        padding: 0;
+    }
+
+    #information div.web {
+        display: none;
+    }
+    #information div.mobile {
+        display: block;
+    }
+
+    #information div.info-text {
+        width: 100%;
+        padding: 0.5rem 1rem 2.5rem;
+        border: 0;
+    }
+
+    #information .flex-item {
+        padding: 0.5rem 
+    }
+}
 
 /* Learning Courses Section */
 
 #courses {
-    width: 100%;
     background-color: rgb(255, 216, 204);
 }
 
@@ -222,7 +349,7 @@ header nav ul li:last-child {
 #courses .courses-container .course-box {
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 238, 219);
+    background-color: whitesmoke;
     align-items: center;
     max-width: 30%;
 }
@@ -235,11 +362,54 @@ header nav ul li:last-child {
     height: 100%;
 }
 
+#courses div.course-mobile {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1rem 1.5rem;
+    margin: .25rem 0;
+    background-color: whitesmoke;
+    color: rgb(11, 29, 55);
+    font-weight: 800;
+}
+
+
+/* Mobile and Responsive Courses Section (breaks at 780px width) */
+@media only screen and (max-width: 1200px) {
+
+    #courses {
+        padding: 2rem 1.5rem 2rem;
+    }
+
+    #courses .courses-container {
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    #courses .course-box div.course-text {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    #courses div.course-text h3{
+        font-size: 2rem;
+    }  
+}
+
+@media only screen and (max-width: 780px) {
+    #courses div.web {
+        display: none;
+    }
+
+    #courses div.mobile {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
 
 /* Thesis Exhibition Section */
 
 #thesis {
-    width: 100%;
     background-color: rgb(255, 238, 219);
 }
 
@@ -258,12 +428,50 @@ header nav ul li:last-child {
 }
 
 
+/* Mobile and Responsive Thesis Exhibit Section (breaks at ??? width) */
+@media only screen and (max-width: 1000px) {
+
+    #thesis .web {
+        display: none;
+    }
+
+    #thesis {
+        padding: 2rem 1rem 3rem;
+    }
+
+    #thesis div.thesis-video {
+        width: 100%;
+        margin: 0rem 1rem;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+
+    #thesis {
+        padding: 1.5rem 0rem 0rem;
+    }
+
+    #thesis div.thesis-video {
+        margin: 0;
+    }
+
+    footer {
+        padding: .5rem 1rem;
+    }
+
+    footer div.web {
+        display: none;
+    }
+}
+
+
 /* Footer Section */
 
 footer {
     height: 72px;
     width: 100%;
-    background-color: rgb(255, 189, 154);
+    background-color: white;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
